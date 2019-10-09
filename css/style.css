@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    height: 100vh;
+    width: 100vw;
+    background-color: lightblue;
+}
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+div {
+    background: url(../img/19-green-fish-png-image.png) center/contain no-repeat;
+    height: 200px;
+    width: 200px;
+    animation: swim 10s infinite linear;
+}
+@keyframes swim {
+    0%, 100% {transform: translateX(0) scaleX(1)}
+    45% {transform: translateX(calc(95vw - 200px)) scaleX(1)}
+    50% {transform: translateX(calc(100vw - 200px)) scaleX(-1)}
+    95% {transform: translateX(5vw) scaleX(-1)}
+}
+div:nth-of-type(2) {
+    animation-delay: 2.5s;
+    animation-duration: 5s;
+}
+div:nth-of-type(3) {
+    animation-delay: 5s;
+    animation-duration: 20s;
+}
+div:nth-of-type(4) {
+    animation-delay: 7.5s;
+    animation-duration: 9s;
+}
