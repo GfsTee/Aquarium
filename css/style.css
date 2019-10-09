@@ -9,11 +9,12 @@ body {
     background-color: lightblue;
 }
 section {
+    height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
 }
-div {
+.fish1, .fish2, .fish3 {
     background: url(../img/19-green-fish-png-image.png) center/contain no-repeat;
     height: 200px;
     width: 200px;
@@ -25,15 +26,40 @@ div {
     50% {transform: translateX(calc(100vw - 200px)) scaleX(-1)}
     95% {transform: translateX(5vw) scaleX(-1)}
 }
-div:nth-of-type(2) {
-    animation-delay: 2.5s;
+.fish2 {
     animation-duration: 5s;
 }
-div:nth-of-type(3) {
-    animation-delay: 5s;
+.fish3 {
     animation-duration: 20s;
 }
-div:nth-of-type(4) {
-    animation-delay: 7.5s;
-    animation-duration: 9s;
+.bubble1, .bubble2, .bubble3 {
+    position: absolute;
+    bottom: -20px;
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 50%;
+    
+    animation: bubani 2s infinite linear;
+}
+.bubble1 {
+    left: 30%;
+    animation-duration: 4s;
+}
+.bubble2 {
+    left: 50%;
+    animation-duration: 5s;
+}
+.bubble3 {
+    left: 80%;
+    animation-duration: 3s;
+}
+@keyframes bubani {
+    0% {transform: translateY(0) scale(1)}
+    10% {transform: translateY(-10vh) scale(2)}
+    30% {transform: translateY(-30vh) scale(0.8)}
+    80% {transform: translateY(-80vh) scale(1.5)}
+    
+    100% {transform: translateY(-110vh) scale(1)}
+
 }
