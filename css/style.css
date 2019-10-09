@@ -32,7 +32,7 @@ section {
 .fish3 {
     animation-duration: 20s;
 }
-.bubble1, .bubble2, .bubble3 {
+.bubble1, .bubble2, .bubble3, .bubble4, .bubble5 {
     position: absolute;
     bottom: -20px;
     width: 10px;
@@ -43,23 +43,32 @@ section {
     animation: bubani 2s infinite linear;
 }
 .bubble1 {
-    left: 30%;
+    left: 10%;
     animation-duration: 4s;
 }
 .bubble2 {
-    left: 50%;
+    left: 30%;
     animation-duration: 5s;
 }
 .bubble3 {
-    left: 80%;
+    left: 44%;
     animation-duration: 3s;
+}
+.bubble4 {
+    left: 66%;
+    animation-duration: 8s;
+}
+.bubble5 {
+    left: 90%;
+    animation-duration: 4s;
+}
+.delay{
+    animation-delay: 2s;
 }
 @keyframes bubani {
     0% {transform: translateY(0) scale(1)}
     10% {transform: translateY(-10vh) scale(2)}
     30% {transform: translateY(-30vh) scale(0.8)}
-    80% {transform: translateY(-80vh) scale(1.5)}
-    
+    80% {transform: translateY(-80vh) scale(2)}
     100% {transform: translateY(-110vh) scale(1)}
-
 }
