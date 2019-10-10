@@ -6,7 +6,8 @@
 body {
     height: 100vh;
     width: 100vw;
-    background-color: lightblue;
+    background-image: linear-gradient(rgb(205, 240, 252) ,rgb(0, 0, 148));
+    overflow: hidden;
 }
 section {
     height: 100vh;
@@ -14,61 +15,105 @@ section {
     flex-direction: column;
     justify-content: space-around;
 }
-.fish1, .fish2, .fish3 {
-    background: url(../img/19-green-fish-png-image.png) center/contain no-repeat;
+.fish {
+    background: url(../img/ZKZl.gif) center/contain no-repeat;
     height: 200px;
     width: 200px;
     animation: swim 10s infinite linear;
+    z-index: 9999;
 }
-@keyframes swim {
-    0%, 100% {transform: translateX(0) scaleX(1)}
-    45% {transform: translateX(calc(95vw - 200px)) scaleX(1)}
-    50% {transform: translateX(calc(100vw - 200px)) scaleX(-1)}
-    95% {transform: translateX(5vw) scaleX(-1)}
+.f1 {
+    height: 100px;
 }
-.fish2 {
+.f2 {
     animation-duration: 5s;
 }
-.fish3 {
+.f3 {
     animation-duration: 20s;
+    height: 150px;
 }
-.bubble1, .bubble2, .bubble3, .bubble4, .bubble5 {
+.s1, .s2, .s3, .s4 {
+    position: absolute;
+    height: 5vh;
+    z-index: 1;
+    animation-duration: 9s;
+}
+
+.s1 {
+    top: 45vh;
+}
+.s2 {
+    top: 50vh;
+}
+.s3 {
+    top: 47.5vh;
+    left: -2vw;
+}
+.s4 {
+    top: 48vh;
+    left: 2vw;
+}
+@keyframes swim {
+    0%, 100% {transform: translateX(0) scaleX(-1)}
+    45% {transform: translateX(calc(95vw - 200px)) scaleX(-1)}
+    50% {transform: translateX(calc(100vw - 200px)) scaleX(1)}
+    95% {transform: translateX(5vw) scaleX(1)}
+}
+.bubble {
     position: absolute;
     bottom: -20px;
-    width: 10px;
-    height: 10px;
+    width: 2vmin;
+    height: 2vmin;
     background-color: white;
+    background: radial-gradient(ellipse at center,  rgba(255,255,255,0.5) 0%,rgba(255,255,255,0) 70%);
     border-radius: 50%;
-    
     animation: bubani 2s infinite linear;
 }
-.bubble1 {
+.b1 {
     left: 10%;
     animation-duration: 4s;
 }
-.bubble2 {
+.b2 {
     left: 30%;
     animation-duration: 5s;
 }
-.bubble3 {
+.b3 {
     left: 44%;
     animation-duration: 3s;
 }
-.bubble4 {
+.b4 {
     left: 66%;
-    animation-duration: 8s;
+    animation-duration: 2.5s;
 }
-.bubble5 {
+.b5 {
     left: 90%;
     animation-duration: 4s;
 }
 .delay{
     animation-delay: 2s;
 }
+.delay1 {
+    animation-delay: 3s;
+    animation-duration: 2s;
+}
 @keyframes bubani {
-    0% {transform: translateY(0) scale(1)}
-    10% {transform: translateY(-10vh) scale(2)}
-    30% {transform: translateY(-30vh) scale(0.8)}
-    80% {transform: translateY(-80vh) scale(2)}
-    100% {transform: translateY(-110vh) scale(1)}
+    0% {transform: translate(0, 0) scale(1); opacity: 1;}
+    10% {transform: translate(-1vw , -10vh) scale(2); opacity: .2;}
+    30% {transform: translate(0vw, -30vh) scale(0.8); opacity: .5;}
+    80% {transform: translate(1vw, -80vh) scale(2); opacity: .8;}
+    100% {transform: translate(0vw, -110vh) scale(1); opacity: .2;}
+}
+.shark {
+    background: url(../img/pngguru.com-id-nhmxa.png) center/contain no-repeat;
+    width: 50vmin;
+    height: 50vmin;
+    position: absolute;
+    animation: shark 2s ease-in-out infinite;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -50vmin;
+}
+@keyframes shark {
+    0%, 100% {transform: translateY(0)}
+    50% {transform: translateY(-25vh);}
 }
