@@ -20,7 +20,7 @@ body {
     background-size: 100vw 120vh;
 }
 .bg2 {
-    background: linear-gradient(rgb(0, 0, 148) 0%, rgb(17, 27, 53) 20%, rgb(21, 34, 66) 100%);
+    background: linear-gradient(rgb(0, 0, 148) 0%, rgb(34, 55, 107) 30%, rgb(30, 49, 95) 100%);
     position: absolute;
     bottom: 0;
     height: 40vh;
